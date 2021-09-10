@@ -68,7 +68,7 @@ public class TestBase {
 				System.setProperty("webdriver.chrome.driver", ChromeBrowserpath);
 				// headless mode we need to add these 2 line
 				  ChromeOptions options=new ChromeOptions();
-				  // options.addArguments("--headless");
+				  options.addArguments("--headless");
                                 options.addArguments("--no-sandbox");
                                 options.addArguments("--disable-dev-shm-usage");
 				// options.addArguments("headless");
