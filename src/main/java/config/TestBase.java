@@ -46,7 +46,7 @@ import utilities.Movefile;
 public class TestBase {
 	public static WebDriver driver;
 	public Properties prop;
-
+        public static String remote_url_chrome = "http://localhost:4445/wd/hub";
 	public WebDriver intialize() throws IOException {
 		prop = new Properties();
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "//src//main//java//config//data.properties");
@@ -65,7 +65,7 @@ public class TestBase {
 		if (OSname.equals("windows")) {
 
 			if (browsername.equals("chrome")) {
-				System.setProperty("webdriver.chrome.driver", ChromeBrowserpath);
+				System.setProperty("webdriver.chrome.driver", remote_url_chrome);
 				// headless mode we need to add these 2 line
 				  ChromeOptions options=new ChromeOptions();
 				  options.addArguments("--headless");
